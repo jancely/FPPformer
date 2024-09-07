@@ -35,7 +35,7 @@ bash ./scripts/Weather_script/FPPformer_WTH.sh
 
 4. Develop your own model.
 
-- Add the model file to the folder `./models`. You can follow the `./models/PFformer.py`.
+- Add the model file to the folder `./models`. You can follow the `./models/FPPformer.py`.
 - Include the newly added model in the `Exp_Basic.model_dict` of  `./exp/exp_basic.py`.
 - Create the corresponding scripts under the folder `./scripts`.
 

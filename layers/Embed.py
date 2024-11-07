@@ -43,9 +43,9 @@ def matrix_power_fractional(A, b):
 
 
 
-class PositionalEmbedding2(nn.Module):
+class FracPositionalEmbedding(nn.Module):
     def __init__(self, d_model, alpha, max_len=5000):
-        super(PositionalEmbedding2, self).__init__()
+        super(FracPositionalEmbedding, self).__init__()
         # Compute the positional encodings once in log space.
         pe = torch.zeros(max_len, d_model).float()
         pe.require_grad = False
@@ -55,6 +55,7 @@ class PositionalEmbedding2(nn.Module):
                     * -(math.log(10000.0) / d_model)).exp()
         #_a = matrix_power_fractional(div_term, alpha)
 
+        # Equation 2 in the paper
         pe[:, 0::2] = math.sqrt(2) * alpha * torch.sin(position * div_term + (torch.pi * alpha) / 2)
         pe[:, 1::2] = math.sqrt(2) * alpha * torch.cos(position * div_term + (torch.pi * alpha) / 2)
 
@@ -232,9 +233,12 @@ class DataEmbedding_Fractional(nn.Module):
         super(DataEmbedding_Fractional, self).__init__()
         self.value_embedding = nn.Linear(c_in, d_model)
         self.dropout = nn.Dropout(p=dropout)
-        #self.position_embedding = PositionalEmbedding(d_model=d_model, alpha=order)
+
+        # Fractional Position Embedding  
+        # Equation 2 in the paper
+        self.position_embedding = FracPositionalEmbedding(d_model=d_model, alpha=order)
         self.position = position
-        self.position_embedding = PositionalEmbedding(d_model=d_model)
+        
 
 
     def forward(self, x, x_mark):

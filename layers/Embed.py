@@ -235,7 +235,6 @@ class DataEmbedding_Fractional(nn.Module):
         self.dropout = nn.Dropout(p=dropout)
 
         # Fractional Position Embedding  
-        # Equation 2 in the paper
         self.position_embedding = FracPositionalEmbedding(d_model=d_model, alpha=order)
         self.position = position
         

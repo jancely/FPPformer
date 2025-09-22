@@ -9,7 +9,7 @@ import numpy as np
 
 class Model(nn.Module):
     """
-    Paper link: https://arxiv.org/abs/2310.06625
+    Paper link: https://ieeexplore.ieee.org/document/10976564
     """
 
     def __init__(self, configs):

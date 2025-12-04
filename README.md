@@ -4,7 +4,7 @@ We provide a detailed code project to evaluate advanced deep time series models 
 
 FPPformer:  Fractional Position With Predictive Attention for Multivariate Time Series Forecasting
 Chengli Zhou, Yanhong Li, et.al.
-Paper: \url{https://ieeexplore.ieee.org/document/10976564/}
+Paper: https://ieeexplore.ieee.org/document/10976564/
 
 ## Introduction
 🌟 Considering the time lag effect between the forecasting output and the input in time series forecasting, FPPformer proposes a new predictive attention to achieve goal. **A predictive attention for time series forecasting.**

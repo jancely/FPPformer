@@ -2,8 +2,8 @@
 This is an open-source project for deep learning researchers, especially for time series forecasting. The repo will release in the future.
 We provide a detailed code project to evaluate advanced deep time series models long-term forecasting.
 
-FPPformer:  Fractional Position With Predictive Attention for Multivariate Time Series Forecasting
-Chengli Zhou, Yanhong Li, et.al.
+FPPformer:  Fractional Position With Predictive Attention for Multivariate Time Series Forecasting  \\
+Chengli Zhou, Yanhong Li, et.al.  \\
 Paper: https://ieeexplore.ieee.org/document/10976564/
 
 ## Introduction
